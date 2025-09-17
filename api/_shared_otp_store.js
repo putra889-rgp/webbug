@@ -1,9 +1,8 @@
 // api/_shared_otp_store.js
-// Simple in-memory store for OTPs and rate limiting.
-// WARNING: ephemeral. Serverless cold starts will reset Map().
-// For production use Redis or other persistent store.
+// In-memory stores for testing. Serverless ephemeral (use Redis in production).
 
-const otpStore = new Map(); // number -> { otp, expiresAt, tries }
-const rateStore = new Map(); // number -> { count, windowStart }
+const otpStore = new Map();      // number -> { otp, expiresAt, tries }
+const rateStore = new Map();     // number -> { count, windowStart }
+const verifiedStore = new Map(); // number -> { verifiedUntil }
 
-module.exports = { otpStore, rateStore };
+module.exports = { otpStore, rateStore, verifiedStore };
