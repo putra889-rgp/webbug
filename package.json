@@ -1,0 +1,8 @@
+{
+  "name": "otp-serverless-for-your-frontend",
+  "version": "1.0.0",
+  "private": true,
+  "dependencies": {
+    "twilio": "^4.11.0"
+  }
+}
