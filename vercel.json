@@ -1,0 +1,6 @@
+{
+  "rewrites": [
+    { "source": "/start-attack", "destination": "/api/send-otp" },
+    { "source": "/status", "destination": "/api/status" }
+  ]
+}
